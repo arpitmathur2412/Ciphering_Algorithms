@@ -1,18 +1,10 @@
 import java.util.*;
 public class PlayfairCipher {
     public static void main(String[] args) {
-//        List<String> list=split("plaintext");
-//        System.out.println(list);
-//        char[][] matrix=createMatrix("water");
-//        for(char[] row:matrix){
-//            for(char ch:row){
-//                System.out.print(ch+"");
-//            }
-//            System.out.println();
-//        }
-        String encrypted=encrypt("plaintext","water");
-        System.out.println("Encrypted Message:"+encrypted);
-        String decrypted=decrypt("water","qkcopwtydt");
+
+//        String encrypted=encrypt("plaintext","water");
+//        System.out.println("Encrypted Message:"+encrypted);
+        String decrypted=decrypt("occurences","mnlqqyygklvn");
         System.out.println("Decrypted Message:"+decrypted);
     }
 

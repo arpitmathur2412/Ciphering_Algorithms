@@ -3,9 +3,9 @@ import java.util.*;
 public class Transposition_Ciphers {
 
     public static void main(String[] args) {
-        System.out.println("Encrypted Text:"+encrypt(create_matrix("attackpostponeduntiltwoam","4312567"),"4312567"));
-        String dectpyted=decrypt(reverse_matrix("ttnaaptmtsuoaodwcoixknlypetz","4312567"),"4312567",5,7);
-        System.out.println("Decrypted text:"+dectpyted);
+        System.out.println("Encrypted Text:"+encrypt(create_matrix("xiglrspskc","4312"),"4312"));
+//        String decrypted=decrypt(reverse_matrix("ttnaaptmtsuoaodwcoixknlypetz","4312567"),"4312567",5,7);
+//        System.out.println("Decrypted text:"+decrypted);
     }
     public static char[][] create_matrix(String plaintext, String key){
         int col_length=key.length();

@@ -3,10 +3,10 @@ import java.util.List;
 
 class Caeser_Cipher {
     public static void main(String[] args) {
-        System.out.println("Encrypted text: "+encrypt("hi how are you",2));
+        System.out.println("Encrypted text: "+encrypt("technology",4));
 //        System.out.println(encrypt("cipher",2));
-        System.out.println(decrypt(encrypt("cipher",2),2));
-        System.out.println(cryptanalysis("cipher"));
+//        System.out.println(decrypt("xiryskpaxgwc",4));
+//        System.out.println(cryptanalysis("cipher"));
     }
     public static String encrypt(String input, int key){
         String encrypted="";

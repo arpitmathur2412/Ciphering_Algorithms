@@ -1,7 +1,15 @@
 public class HillCipher {
 
     public static void main(String[] args) {
-        System.out.println(encrypt("EXAM","HILL"));
+        System.out.println("Encrypted text: "+encrypt("EXAM","HILL"));
+        int[][] matrix=getKeyMatrix("HILL");
+        for(int[] row:matrix){
+            for(int val:row){
+                System.out.println(val);
+            }
+        }
+//        int[][] key_inverse={{25,22},{1,23}};
+//        System.out.println("Decrypted text: "+decrypt(key_inverse,"ELSC"));
     }
 
     public static int[][] getKeyMatrix(String plaintext){
@@ -55,6 +63,19 @@ public class HillCipher {
             }
         }
         return encrypted;
+    }
+
+    public static String decrypt(int[][] K_inverse, String encrypted){
+        int[][] E=getplainTextMatrix(encrypted);
+        int[][] multiplied_matrix=mat_mul(K_inverse,2,2,E,2,2);
+        String decrypted="";
+        for(int i=0;i<2;i++){
+            for(int j=0;j<2;j++){
+                multiplied_matrix[j][i]=multiplied_matrix[j][i]%26;
+                decrypted+=(char)('a'+multiplied_matrix[j][i])+"";
+            }
+        }
+        return decrypted.toUpperCase();
     }
 
 }
